@@ -1,0 +1,34 @@
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
+public class Main {
+    public static void main(String[] args){
+        //JLabel=a gui display area for astring of text.an image, or both
+        ImageIcon image=new ImageIcon("C:\\Users\\badis\\Downloads\\download.png");
+        Border border= BorderFactory.createLineBorder(Color.green,3);
+        JLabel label=new JLabel();// create a label
+         label.setText("BRO, do you even code");// set text of label
+        label.setIcon(image);
+        label.setHorizontalTextPosition(JLabel.CENTER);//SET TEXT LEFT,CENTER,RIGHT OF IMAGEICON
+        label.setVerticalTextPosition(JLabel.TOP);//SET TEXT TOP,BOOTOM,CENTER OF IMAGE ICON
+        label.setForeground(Color.green);//set font color of text
+        label.setFont(new Font("MV BOLI",Font.PLAIN,20));//set font of text
+        label.setIconTextGap(-25);//set gap of text toimage
+        label.setBackground(Color.black );//set background color
+        label.setOpaque(true);//display background color
+        label.setBorder(border);
+        label.setVerticalAlignment(JLabel.CENTER);//SET VERTICAL POSITION OF ICON+TEXT WITHIN LABEL
+        label.setHorizontalAlignment(JLabel.CENTER);//SET HORIZONTAL POSITION OF ICON+TEXT WITHIN LABEL
+
+
+        JFrame frame=new JFrame();
+        //frame.setSize(420,420);
+
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.add(label);
+        frame.pack();
+
+    }
+}
